@@ -1,0 +1,15 @@
+/*
+Theme Name: Chemiko
+Theme URI: https://pixel-web.in.ua
+Author: the drammer.g
+Author URI: https://github.com/drammer/
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.navbar-inverse {
+    background-color: rgba(255,255,255,0.8);
+    border: 0;
+}
