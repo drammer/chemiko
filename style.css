@@ -9,11 +9,136 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(/fonts/Roboto-Regular.woff2) format('woff2');
+}
+
 body{
     background: #fff;
 }
+/* TOP STYLE */
 
-.navbar-inverse {
+.navbar.navbar-default {
     background-color: rgba(255,255,255,0.8);
     border: 0;
+}
+.nav.nav-justified > li > a {
+    color: #363636;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+img.flag-lang {
+    padding: 0 5px;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.nav-justified {
+    width: 60%;
+}
+.navbar {
+    min-height: 70px;
+    margin-bottom: 0px;
+    border: 0;
+    padding: 5px 0 0px;
+}
+.nav.nav-justified > li > a:hover{
+    outline: none;
+}
+.nav.nav-justified > li > a:hover{
+    color: #363636;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+.nav.nav-justified>li {
+    float: none;
+}
+.nav.nav-justified>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.polylang-custom-block {
+    line-height: 70px;
+    float: right;
+}
+.nav.nav-justified {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: 0;
+}
+.nav-justified>li {
+    display: table-cell;
+    width: 1%;
+    vertical-align: middle;
+}
+.nav>li>a:hover {
+    text-decoration: none;
+     background-color: #fff;
+}
+#menu-top-menu-cz.nav.nav-justified>li {
+    float: none;
+    height: 65px;
+}
+/* TOP SLOGAN BLOCK*/
+section.top-slogan-block{
+    width: 1920px;
+    height: 596px;
+    opacity: 0.8;
+    background: red;
+}
+.container-fluid.all-content-wrapp {
+    padding: 0;
+}
+.top-slogan-block{
+
+}
+.jumbotron.top-slogan-block {
+    background: url("images/bg-header.png") no-repeat fixed;
+    background-size: 100% auto;
+}
+.nav>li>a:hover {
+    text-decoration: none;
+    background: none;
+}
+.container-fluid .jumbotron {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 0;
+}
+h1.slogan span{
+    font-weight: 300;
+}
+h1.slogan{
+    text-shadow: 0 1px 1px rgba(0, 0, 1, 0.35);
+    color: white;
+    font-family: Roboto;
+    font-size: 73px;
+    line-height: 92px;
+
+    /* Text style for "CHEMIKO" */
+    font-weight: 700;
+}
+h1.slogan span {
+    font-weight: 300;
+    clear: both;
+    display: block;
+}
+.container.slogan {
+    padding-top: 50px;
 }

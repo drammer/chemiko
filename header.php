@@ -27,7 +27,7 @@
     'raw'=>1,
 );?>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -36,26 +36,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <?php $logo_top = get_theme_mod('chemiko_top_logo'); if(isset($logo_top) || !empty($logo_top)): ?><a class="navbar-brand" href="<?php get_home_url(); ?>"><img src="<?php echo $logo_top; ?>"/></a><?php endif;?>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
 
             <?php echo wp_nav_menu( array(
                 'menu'          => 'Top menu',
                 'container'     => 'div',
-                'menu_class'    => 'nav navbar-nav ',
+                'menu_class'    => 'nav navbar-left nav-justified',
             ));?>
 <div class="polylang-custom-block">
     <?php pll_custom_menu_flag(pll_the_languages($pll_lang), 'class="flag-lang"');?>
 </div>
-
-<!--            <ul class="nav navbar-nav">-->
-<!--                <li class="active"><a href="#">Home</a></li>-->
-<!--                <li><a href="#about">About</a></li>-->
-<!--                <li><a href="#contact">Contact</a></li>-->
-<!--            </ul>-->
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
-<div class="container">
+<div class="container-fluid all-content-wrapp">

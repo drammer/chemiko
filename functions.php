@@ -97,17 +97,81 @@ function pll_custom_menu_flag($slug, $css_style=''){
     $arr_flag = array();
     foreach($slug as $key => $value):
             if($value['slug']=='cs'){
-                echo '<img src="'.get_stylesheet_directory_uri().'/images/flag_cs.png" '. $css_style .' />';
+                echo '<a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_cs.png" '. $css_style .' /></a>';
             }
             if($value['slug']=='en'){
-                echo '<img src="'.get_stylesheet_directory_uri().'/images/flag_en.png" '. $css_style .' />';
+                echo '<a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_en.png" '. $css_style .' /></a>';
             }
             if($value['slug']=='ukr'){
-                echo '<img src="'.get_stylesheet_directory_uri().'/images/flag_ukr.png" '. $css_style .' />';
+                echo '<a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_ukr.png" '. $css_style .' /></a>';
             }
             if($value['slug']=='ru'){
-                echo '<img src="'.get_stylesheet_directory_uri().'/images/flag_ru.png" '. $css_style .' />';
+                echo '<a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_ru.png" '. $css_style .' /></a>';
             }
     endforeach;
     return $arr_flag;
 }
+
+function chemiko_customize_register($wp_customize){
+
+    if(class_exists('WP_Customize_Panel')):
+
+        $wp_customize->add_panel( 'panel_general', array(
+            'priority' => 30,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __( 'Основные настройки сайта', 'chemiko' )
+        ) );
+
+        $wp_customize->add_section( 'chemiko_general_section' , array(
+            'title'       => __( 'Лого, слоган, копирайт', 'chemiko' ),
+            'priority'    => 30,
+            'panel' => 'panel_general'
+        ));
+
+    /* LOGO */
+
+    $wp_customize->add_setting( 'chemiko_top_logo', array('sanitize_callback' => 'esc_url_raw'));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
+            'label'    => __( 'Логотип сайта верхний', 'zerif-lite' ),
+            'section'  => 'chemiko_general_section',
+            'settings' => 'chemiko_top_logo',
+            'priority'    => 1,
+    )));
+
+    $wp_customize->add_setting('chemiko_top_slogan');
+    $wp_customize->add_control('chemiko_top_slogan', array(
+        'label'         => __('Слоган в верхней шапке', 'chemiko'),
+        'section'       => 'chemiko_general_section',
+        'setting'       => 'chemiko_top_slogan',
+        'priority'      => 2
+    ));
+
+        $wp_customize->add_setting('chemiko_top_slogan_ukr');
+    $wp_customize->add_control('chemiko_top_slogan_ukr', array(
+        'label'         => __('Слоган в верхней шапке UKR', 'chemiko'),
+        'section'       => 'chemiko_general_section',
+        'setting'       => 'chemiko_top_slogan_ukr',
+        'priority'      => 3
+    ));
+
+        $wp_customize->add_setting('chemiko_top_slogan_cs');
+    $wp_customize->add_control('chemiko_top_slogan_cs', array(
+        'label'         => __('Слоган в верхней шапке CZ', 'chemiko'),
+        'section'       => 'chemiko_general_section',
+        'setting'       => 'chemiko_top_slogan_cs',
+        'priority'      => 4
+    ));
+
+        $wp_customize->add_setting('chemiko_top_slogan_eng');
+    $wp_customize->add_control('chemiko_top_slogan_eng', array(
+        'label'         => __('Слоган в верхней шапке ENG', 'chemiko'),
+        'section'       => 'chemiko_general_section',
+        'setting'       => 'chemiko_top_slogan_eng',
+        'priority'      => 5
+    ));
+
+endif;
+}
+
+add_action('customize_register', 'chemiko_customize_register' );
