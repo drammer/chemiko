@@ -170,6 +170,13 @@ function chemiko_customize_register($wp_customize){
         'setting'       => 'chemiko_top_slogan_eng',
         'priority'      => 5
     ));
+    $wp_customize->add_setting('chemiko_top_img', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'chemiko_top_img', array(
+            'label'         => __('Картинка в верхний блок слогана', 'chemiko'),
+            'section'       => 'chemiko_general_section',
+            'setting'      => 'chemiko_top_img',
+            'priority'      => 6,
+        )));
 
 endif;
 }
