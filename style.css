@@ -175,3 +175,96 @@ span.cat-title{
     text-transform: uppercase;
     padding: 5px 15px 50px;
 }
+ul.category-box {
+    background: #fff;
+    background-color: white;
+    border: 1px solid #bbb;
+}
+.category-box li{
+    font-family: Roboto;
+
+/* Text style for "Для стирки" */
+    color: black;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    text-transform: uppercase;
+
+/* Text style for "•" */
+    color: #d90015;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 75px;
+
+/* Text style for "Средства для с" */
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 75px;
+
+/* Text style for "•" */
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 60px;
+
+/* Text style for "Средства для с" */
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 48px;
+
+/* Text style for "•" */
+    color: #d90015;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 60px;
+
+/* Text style for "Средства и смя" */
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 48px;
+
+/* Text style for "/ ополаскивате" */
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    list-style: none;
+}
+
+.nav.navbar-nav.navbar-right.polylang-custom-block a {
+    padding: 1%;
+}
+.navbar-right.polylang-custom-block {
+    float: right !important;
+    margin-right: -15px;
+    margin-top: 15px;
+}
+.cat-box-item ul.category-box li:hover{
+    background-color: #d90015;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 75px;
+}
+.cat-box-item ul.category-box li{
+    color: #d90015;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 75px;
+    list-style: disc;
+}
+.cat-box-item ul.category-box li:hover a {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 48px;
+}
+.cat-box-item ul.category-box li a {
+    /* Text style for "Средства для с" */
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 75px;
+}

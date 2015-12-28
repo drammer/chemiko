@@ -15,9 +15,9 @@
             <div class="cat-box-item">
                     <span class="cat-title">Для стирки</span>
                 <ul class="category-box">
-                    <li class="iten-category">Средства для стирки / сыпучие /</li>
-                    <li class="iten-category">Средство для стирки / гели /</li>
-                    <li class="iten-category">Средства и смягчители /ополаскиватели /</li>
+                    <li class="iten-category"><a href="#">Средства для стирки / сыпучие /</a></li>
+                    <li class="iten-category"><a href="#">Средство для стирки / гели /</a></li>
+                    <li class="iten-category"><a href="#">Средства и смягчители /ополаскиватели /</a></li>
                 </ul>
             </div>
         </div>
@@ -26,9 +26,9 @@
             <div class="cat-box-item">
                 <span class="cat-title">Для дома</span>
                 <ul class="category-box">
-                    <li class="iten-category">Средства для стирки / сыпучие /</li>
-                    <li class="iten-category">Средство для стирки / гели /</li>
-                    <li class="iten-category">Средства и смягчители /ополаскиватели /</li>
+                    <li class="iten-category"><a href="#">Средства для стирки / сыпучие /</a></li>
+                    <li class="iten-category"><a href="#">Средство для стирки / гели /</a></li>
+                    <li class="iten-category"><a href="#">Средства и смягчители /ополаскиватели /</a></li>
                 </ul>
             </div>
         </div>

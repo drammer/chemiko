@@ -97,16 +97,16 @@ function pll_custom_menu_flag($slug, $css_style=''){
     $arr_flag = array();
     foreach($slug as $key => $value):
             if($value['slug']=='cs'){
-                echo '<a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_cs.png" '. $css_style .' /></a>';
+                echo '<li><a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_cs.png" '. $css_style .' /></a></li>';
             }
             if($value['slug']=='en'){
-                echo '<a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_en.png" '. $css_style .' /></a>';
+                echo '<li><a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_en.png" '. $css_style .' /></a></li>';
             }
             if($value['slug']=='ukr'){
-                echo '<a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_ukr.png" '. $css_style .' /></a>';
+                echo '<li><a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_ukr.png" '. $css_style .' /></a></li>';
             }
             if($value['slug']=='ru'){
-                echo '<a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_ru.png" '. $css_style .' /></a>';
+                echo '<li><a href="'.$value['url'].'"><img src="'.get_stylesheet_directory_uri().'/images/flag_ru.png" '. $css_style .' /></a></li>';
             }
     endforeach;
     return $arr_flag;

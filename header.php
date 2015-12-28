@@ -36,7 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <?php $logo_top = get_theme_mod('chemiko_top_logo'); if(isset($logo_top) || !empty($logo_top)): ?><a class="navbar-brand" href="<?php get_home_url(); ?>"><img src="<?php echo $logo_top; ?>"/></a><?php endif;?>
+            <?php $logo_top = get_theme_mod('chemiko_top_logo'); if(isset($logo_top) || !empty($logo_top)): ?><a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo $logo_top; ?>"/></a><?php endif;?>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
 
@@ -45,9 +45,11 @@
                 'container'     => 'div',
                 'menu_class'    => 'nav navbar-left nav-justified',
             ));?>
-<div class="polylang-custom-block">
-    <?php pll_custom_menu_flag(pll_the_languages($pll_lang), 'class="flag-lang"');?>
-</div>
+
+    <ul class="nav navbar-nav navbar-right polylang-custom-block">
+        <?php pll_custom_menu_flag(pll_the_languages($pll_lang), 'class="flag-lang"');?>
+    </ul>
+
         </div><!--/.nav-collapse -->
     </div>
 </nav>
