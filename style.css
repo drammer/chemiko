@@ -164,6 +164,7 @@ span.cat-title{
 }
 .cat-box-item {
     padding: 25px 0 0;
+    position: relative;
 }
 .title-block {
     text-align: center;
@@ -175,64 +176,38 @@ span.cat-title{
     text-transform: uppercase;
     padding: 5px 15px 50px;
 }
-ul.category-box {
-    background: #fff;
-    background-color: white;
-    border: 1px solid #bbb;
+.container.production-type .block-left ul.category-box,
+.container.production-type .block-right ul.category-box {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: white none repeat scroll 0 0;
+    border-color: #d5d5d5 #bbb #bbb;
+    border-image: none;
+    border-style: solid;
+    border-width: 0;
+    margin: 20px 15px 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.6s ease-in-out, border 0.6s ease-in-out;
+    -moz-transition: max-height 0.6s ease-in-out, border 0.6s ease-in-out;
+    -ms-transition: max-height 0.6s ease-in-out, border 0.6s ease-in-out;
+    -o-transition: max-height 0.6s ease-in-out, border 0.6s ease-in-out;
+    transition: max-height 0.6s ease-in-out, border 0.6s ease-in-out;
+    position: absolute;
+    width: 100%;
 }
-.category-box li{
+.category-box li {
     font-family: Roboto;
 
-/* Text style for "Для стирки" */
-    color: black;
+    /* Text style for "Для стирки" */
     font-size: 26px;
     font-weight: 700;
     line-height: 31px;
     text-transform: uppercase;
-
-/* Text style for "•" */
-    color: #d90015;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 75px;
-
-/* Text style for "Средства для с" */
-    color: black;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 75px;
-
-/* Text style for "•" */
-    color: white;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 60px;
-
-/* Text style for "Средства для с" */
-    color: white;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 48px;
-
-/* Text style for "•" */
-    color: #d90015;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 60px;
-
-/* Text style for "Средства и смя" */
-    color: black;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 48px;
-
-/* Text style for "/ ополаскивате" */
-    color: black;
-    font-size: 18px;
-    font-weight: 300;
-    list-style: none;
 }
-
 .nav.navbar-nav.navbar-right.polylang-custom-block a {
     padding: 1%;
 }
@@ -241,6 +216,14 @@ ul.category-box {
     margin-right: -15px;
     margin-top: 15px;
 }
+.cat-box-item ul.category-box li{
+    color: #d90015;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 75px;
+    list-style: initial;
+    list-style-position: inside;
+}
 .cat-box-item ul.category-box li:hover{
     background-color: #d90015;
     color: white;
@@ -248,12 +231,12 @@ ul.category-box {
     font-weight: 900;
     line-height: 75px;
 }
-.cat-box-item ul.category-box li{
-    color: #d90015;
-    font-size: 20px;
-    font-weight: 900;
+.cat-box-item ul.category-box li a {
+    /* Text style for "Средства для с" */
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
     line-height: 75px;
-    list-style: disc;
 }
 .cat-box-item ul.category-box li:hover a {
     color: white;
@@ -261,10 +244,16 @@ ul.category-box {
     font-weight: 300;
     line-height: 48px;
 }
-.cat-box-item ul.category-box li a {
-    /* Text style for "Средства для с" */
-    color: black;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 75px;
+.container.production-type .block-left:hover ul.category-box,
+.container.production-type .block-right:hover ul.category-box{
+    border-width: 15px 1px 1px;
+    max-height: 500px;
+    -webkit-transition: max-height 0.5s ease-in;
+    -moz-transition: max-height 0.5s ease-in;
+    -ms-transition: max-height 0.5s ease-in;
+    -o-transition: max-height 0.5s ease-in;
+    transition: max-height 0.5s ease-in;
+}
+.block-left > img,.block-right > img{
+    cursor: pointer;
 }
