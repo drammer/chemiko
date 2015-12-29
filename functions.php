@@ -178,6 +178,70 @@ function chemiko_customize_register($wp_customize){
             'priority'      => 6,
         )));
 
+
+        $wp_customize->add_panel( 'field_panel_general', array(
+            'priority' => 31,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __( 'Дополнительные поля', 'chemiko' )
+        ) );
+
+        $wp_customize->add_section( 'chemiko_field_section' , array(
+            'title'       => __( 'Секция ссылок на дополнительные страницы', 'chemiko' ),
+            'priority'    => 30,
+            'panel' => 'field_panel_general'
+        ));
+
+    /* NEW FIELD IMG */
+
+    $wp_customize->add_setting( 'chemiko_img_1', array('sanitize_callback' => 'esc_url_raw'));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'chemiko_img_1', array(
+            'label'    => __( 'Картинка для левого блока ', 'chemiko' ),
+            'section'  => 'chemiko_field_section',
+            'settings' => 'chemiko_img_1',
+            'priority'    => 1,
+    )));
+
+    $wp_customize->add_setting('chemiko_text_1');
+    $wp_customize->add_control('chemiko_text_1', array(
+        'label'         => __('Подпись для левого блока', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_text_1',
+        'priority'      => 2
+    ));
+        $wp_customize->add_setting('chemiko_link_1');
+    $wp_customize->add_control('chemiko_link_1', array(
+        'label'         => __('Линк на страничку для левого блока', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_link_1',
+        'priority'      => 3
+    ));
+
+     /* NEW FIELD 2 IMG*/
+
+        $wp_customize->add_setting( 'chemiko_img_2', array('sanitize_callback' => 'esc_url_raw'));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'chemiko_img_2', array(
+            'label'    => __( 'Картинка для правого блока ', 'chemiko' ),
+            'section'  => 'chemiko_field_section',
+            'settings' => 'chemiko_img_2',
+            'priority'    => 4,
+    )));
+
+    $wp_customize->add_setting('chemiko_link_2');
+    $wp_customize->add_control('chemiko_link_2', array(
+        'label'         => __('Линк на страничку для правого блока', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_link_1',
+        'priority'      => 5
+    ));
+        $wp_customize->add_setting('chemiko_text_2');
+    $wp_customize->add_control('chemiko_text_2', array(
+        'label'         => __('Подпись для правого блока', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_text_1',
+        'priority'      => 6
+    ));
+
 endif;
 }
 

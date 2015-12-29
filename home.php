@@ -23,4 +23,13 @@ $top_img_slogan = get_theme_mod('chemiko_top_img');
 </div>
 
 <?php get_template_part('section/content','production'); ?>
+
+<?php get_template_part('section/content','mail-block'); ?>
+<div class="col-xs-12 bottom-block">
+    <div class="col-xs-12 col-md-6 col-sm-12 new-product">
+        <?php get_template_part('section/content','new-product'); ?>
+    </div>
+
+</div>
+
 <?php get_footer();?>

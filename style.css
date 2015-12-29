@@ -163,7 +163,7 @@ span.cat-title{
     text-transform: uppercase;
 }
 .cat-box-item {
-    padding: 25px 0 0;
+    padding: 25px 0 20px;
     position: relative;
 }
 .title-block {
@@ -198,6 +198,7 @@ span.cat-title{
     transition: max-height 0.6s ease-in-out, border 0.6s ease-in-out;
     position: absolute;
     width: 100%;
+    z-index: 10;
 }
 .category-box li {
     font-family: Roboto;
@@ -244,8 +245,11 @@ span.cat-title{
     font-weight: 300;
     line-height: 48px;
 }
-.container.production-type .block-left:hover ul.category-box,
-.container.production-type .block-right:hover ul.category-box{
+.container.production-type .cat-box-item:hover{
+    cursor: pointer;
+}
+.container.production-type .cat-box-item:hover ul.category-box,
+.container.production-type .cat-box-item:hover ul.category-box{
     border-width: 15px 1px 1px;
     max-height: 500px;
     -webkit-transition: max-height 0.5s ease-in;
@@ -257,7 +261,107 @@ span.cat-title{
 .block-left > img,.block-right > img{
     cursor: pointer;
 }
-
+.page-item-block-right, .page-item-block-left {
+    text-align: center;
+    padding: 20px 0 10px;
+}
+.mail-block {
+    padding: 20px 0 10px;
+    background: url("images/bg-top-slogan_01.png") no-repeat fixed bottom;
+    background-size: 100%;
+    margin: 25px 0;
+}
+.title-mail {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 59px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0px 0 15px;
+}
+.cat-box-item span{
+    max-width: 240px;
+    margin: 0 auto;
+    display: block;
+}
+.mail-container .col-xs-12.col-md-6.col-sm-6 {
+    padding: 15px 15px;
+}
+.button-box-mail {
+    text-align: right;
+    padding: 25px 15px 10px;
+}
+button.btn.btn-default {
+    background-color: #d90015;
+    border-radius: 5px;
+    color: #fff;
+    color: white;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 31px;
+    text-transform: uppercase;
+}
+.mail-container ::-webkit-input-placeholder{
+    opacity: 0.6;
+    color: black;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.42857143;
+}
+.mail-container ::-moz-input-placeholder{
+    opacity: 0.6;
+    color: black;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.42857143;
+}
+.mail-container :-moz-input-placeholder{
+    opacity: 0.6;
+    color: black;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.42857143;
+}
+.mail-container :-ms-input-placeholder{
+    opacity: 0.6;
+    color: black;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.42857143;
+}
+.mail-container .btn-default.active.focus, .mail-container .btn-default.active:focus,.mail-container .btn-default.active:hover,.mail-container .btn-default:active.focus,.mail-container .btn-default:active:focus,.mail-container .btn-default:active:hover,.mail-container .open>.dropdown-toggle.btn-default.focus,.mail-container .open>.dropdown-toggle.btn-default:focus,.mail-container .open>.dropdown-toggle.btn-default:hover {
+    color: #fff;
+    background-color: #c20013;
+    border-color: #c20013;
+}
+.mail-container .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 23px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.mail-container textarea.form-control{
+    height: inherit;
+}
 @media screen and (max-width: 768px){
     .container.production-type .block-left ul.category-box,
     .container.production-type .block-right ul.category-box {
