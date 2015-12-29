@@ -88,6 +88,8 @@ function chemiko_scripts() {
     wp_enqueue_script( 'action-script', get_template_directory_uri() . '/js/action.js', array( 'jquery' ), '20150330', true );
     //load bootstrap js
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/dist/js/bootstrap.js', array( 'jquery' ), '3.3.6', true );
+    wp_enqueue_script( 'smoothscroll-script', get_template_directory_uri() . '/js/smoothscroll.js', array( 'jquery' ), '1.2', true );
+    wp_enqueue_script( 'scrollreveal-script', get_template_directory_uri() . '/js/scrollReveal.js', array( 'jquery' ), '1.3', true );
 }
 add_action( 'wp_enqueue_scripts', 'chemiko_scripts' );
 

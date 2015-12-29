@@ -20,6 +20,7 @@ body{
     background: #fff;
     font-family: 'Roboto';
 }
+
 /* TOP STYLE */
 
 .navbar.navbar-default {
@@ -269,7 +270,7 @@ span.cat-title{
     padding: 20px 0 10px;
     background: url("images/bg-top-slogan_01.png") no-repeat fixed bottom;
     background-size: 100%;
-    margin: 25px 0;
+    margin: 25px 0 0;
 }
 .title-mail {
     color: #fff;
@@ -361,6 +362,124 @@ button.btn.btn-default {
 }
 .mail-container textarea.form-control{
     height: inherit;
+}
+.new-product{
+    background: rgba(253,253,253,0.63);
+}
+.block-title {
+    color: #002e7b;
+    font-family: Roboto;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 59px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+/* NEW PRODUCT ITEM STYLE*/
+.new-product-item {
+    height: 153px;
+    position: relative;
+    overflow: hidden;
+    width: 240px;
+    padding: 0;
+    margin: 15px 15px;
+}
+.new-product-desc {
+    position: absolute;
+    bottom: 0;
+    background-color: #075fb7;
+    width: 100%;
+    padding: 5px 25px 5px 5px;
+    color: white;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+.media {
+    margin-bottom: 25px;
+}
+.new-product-item .img-responsive {
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-height: 163px;
+    max-width: 263px;
+}
+.new-product-item i.fa.fa-caret-right {
+    float: right;
+    line-height: 20px;
+    position: relative;
+    left: 15px;
+}
+.news-block .media-object {
+    display: block;
+    max-height: 150px;
+}
+.news-block .media-heading {
+    color: #363636;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 31px;
+    padding: 0;
+    text-transform: uppercase;
+    margin: -5px 0 -5px 0;
+}
+.news-block .media-text {
+    color: #363636;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+.news-block .media-time-news {
+    color: #363636;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.news-block .media-text{
+    color: #363636;
+    font-size: 16px;
+    font-weight: 300;
+}
+a.media-moore {
+    float: right;
+    padding: 0 15px;
+    /* Text style for "Подробнее" */
+    color: #002e7b;
+    font-size: 16px;
+    font-style: italic;
+    text-decoration: underline;
+}
+.news-block .media-object {
+    display: block;
+    max-height: 150px;
+    position: relative;
+    opacity: 0.5;
+    -webkit-transition: opacity 1s ease-out;
+    -moz-transition: opacity 1s ease-out;
+    -ms-transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+}
+.news-block .media-object:hover{
+    opacity: 1;
+}
+.news-block a.media-href {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: block;
+}
+.col-xs-12.bottom-block {
+    overflow: hidden;
 }
 @media screen and (max-width: 768px){
     .container.production-type .block-left ul.category-box,

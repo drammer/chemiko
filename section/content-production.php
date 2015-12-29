@@ -6,7 +6,7 @@
  * Time: 11:15
  */
 ?>
-<div class="col-xs-12 col-md-12 col-sm-12 all-production-wrapp">
+<div class="col-xs-12 col-md-12 col-sm-12 all-production-wrapp" data-scrollreveal="enter bottom after 0s over 1s">
     <div class="container production-type">
         <div class="col-xs-12 title-block">Типы продукции</div>
         <div class="col-xs-12 col-sm-6 col-md-6 block-left">
@@ -35,7 +35,7 @@
     </div>
 </div>
 <div class="col-xs-12 col-md-12 col-sm-12 section-field-page">
-    <div class="container field-section">
+    <div class="container field-section" data-scrollreveal="enter right after 0s over 1s">
         <div class="col-xs-12 col-md-6 col-sm-6 page-item-block-left">
             <?php
            $link_left = get_theme_mod('chemiko_link_1');

@@ -34,13 +34,13 @@ $button = array(
     <div class="col-xs-12 title-mail">обратная связь</div>
     <div class="container mail-container">
 
-            <div class="col-xs-12 col-md-6 col-sm-6">
+            <div class="col-xs-12 col-md-6 col-sm-6" data-scrollreveal="enter right after 0s over 1s">
                 <input type="text" class="form-control" name="name" id="name" placeholder="<?php echo $nameplaceholder[$lang];?>">
             </div>
-            <div class="col-xs-12 col-md-6 col-sm-6">
+            <div class="col-xs-12 col-md-6 col-sm-6" data-scrollreveal="enter left after 0s over 1s">
                 <input type="tel" name="phone" id="phone" placeholder="<?php echo $phoneplaceholder[$lang];?>" class="form-control">
             </div>
-    <div class="col-xs-12 col-md-12 col-sm-12">
+    <div class="col-xs-12 col-md-12 col-sm-12" data-scrollreveal="enter bottom after 0s over 1s">
         <textarea name="mail_text" id="mail_text" class="form-control" rows="3" placeholder="<?php echo $textareaplaceholder[$lang];?>"></textarea>
     </div>
         <div class="col-xs-12 button-box-mail"><button class="btn btn-default" type="submit"><?php echo $button[$lang];?></button></div>
