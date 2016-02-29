@@ -5,6 +5,12 @@
  * Date: 29.12.15
  * Time: 18:02
  */
+$arrayTMail = array(
+    'ru'    => 'Обратная связь',
+    'cs'    => 'Zpětná vazba od zákazníků',
+    'ukr'   => 'Зворотній зв\'язок',
+    'en'    => 'Customer feedback',
+);
 $nameplaceholder = array(
     'en'    => 'Name',
     'ru'    => 'Имя',
@@ -31,7 +37,7 @@ $button = array(
 );
 ?>
 <div class="col-xs-12 mail-block">
-    <div class="col-xs-12 title-mail">обратная связь</div>
+    <div class="col-xs-12 title-mail"><?php echo $arrayTMail[ICL_LANGUAGE_CODE]?></div>
     <div class="container mail-container">
 
             <div class="col-xs-12 col-md-6 col-sm-6" data-scrollreveal="enter right after 0s over 1s">

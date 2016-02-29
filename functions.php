@@ -39,6 +39,7 @@ function chemiko_setup() {
     register_nav_menus( array(
         'primary' => __( 'Primary Menu',      'chemiko' ),
         'social'  => __( 'Social Links Menu', 'chemiko' ),
+        'bottom'  => __( 'Bottom Menu', 'chemiko' ),
     ) );
 
     /*
@@ -135,10 +136,17 @@ function chemiko_customize_register($wp_customize){
 
     $wp_customize->add_setting( 'chemiko_top_logo', array('sanitize_callback' => 'esc_url_raw'));
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
-            'label'    => __( 'Логотип сайта верхний', 'zerif-lite' ),
+            'label'    => __( 'Логотип сайта верхний левый', 'zerif-lite' ),
             'section'  => 'chemiko_general_section',
             'settings' => 'chemiko_top_logo',
             'priority'    => 1,
+    )));
+        $wp_customize->add_setting( 'chemiko_top_logo_2', array('sanitize_callback' => 'esc_url_raw'));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo_2', array(
+            'label'    => __( 'Логотип сайта верхний правый', 'zerif-lite' ),
+            'section'  => 'chemiko_general_section',
+            'settings' => 'chemiko_top_logo_2',
+            'priority'    => 2,
     )));
 
     $wp_customize->add_setting('chemiko_top_slogan');
@@ -146,7 +154,7 @@ function chemiko_customize_register($wp_customize){
         'label'         => __('Слоган в верхней шапке', 'chemiko'),
         'section'       => 'chemiko_general_section',
         'setting'       => 'chemiko_top_slogan',
-        'priority'      => 2
+        'priority'      => 3
     ));
 
         $wp_customize->add_setting('chemiko_top_slogan_ukr');
@@ -154,7 +162,7 @@ function chemiko_customize_register($wp_customize){
         'label'         => __('Слоган в верхней шапке UKR', 'chemiko'),
         'section'       => 'chemiko_general_section',
         'setting'       => 'chemiko_top_slogan_ukr',
-        'priority'      => 3
+        'priority'      => 4
     ));
 
         $wp_customize->add_setting('chemiko_top_slogan_cs');
@@ -162,7 +170,7 @@ function chemiko_customize_register($wp_customize){
         'label'         => __('Слоган в верхней шапке CZ', 'chemiko'),
         'section'       => 'chemiko_general_section',
         'setting'       => 'chemiko_top_slogan_cs',
-        'priority'      => 4
+        'priority'      => 5
     ));
 
         $wp_customize->add_setting('chemiko_top_slogan_eng');
@@ -170,14 +178,29 @@ function chemiko_customize_register($wp_customize){
         'label'         => __('Слоган в верхней шапке ENG', 'chemiko'),
         'section'       => 'chemiko_general_section',
         'setting'       => 'chemiko_top_slogan_eng',
-        'priority'      => 5
+        'priority'      => 6
     ));
     $wp_customize->add_setting('chemiko_top_img', array('sanitize_callback' => 'esc_url_raw'));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'chemiko_top_img', array(
             'label'         => __('Картинка в верхний блок слогана', 'chemiko'),
             'section'       => 'chemiko_general_section',
             'setting'      => 'chemiko_top_img',
-            'priority'      => 6,
+            'priority'      => 7,
+        )));
+
+        $wp_customize->add_setting( 'chemiko_logo_bottom', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'chemiko_logo_bottom', array(
+            'label'    => __( 'Логотип сайта нижний', 'chemiko' ),
+            'section'  => 'chemiko_general_section',
+            'settings' => 'chemiko_logo_bottom',
+            'priority'    => 8,
+        )));
+        $wp_customize->add_setting( 'chemiko_logo_bottom_2', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'chemiko_logo_bottom_2', array(
+            'label'    => __( 'Логотип сайта нижний левый', 'chemiko' ),
+            'section'  => 'chemiko_general_section',
+            'settings' => 'chemiko_logo_bottom_2',
+            'priority'    => 8,
         )));
 
 
@@ -218,6 +241,48 @@ function chemiko_customize_register($wp_customize){
         'setting'       => 'chemiko_link_1',
         'priority'      => 3
     ));
+        $wp_customize->add_setting('chemiko_text_2');
+    $wp_customize->add_control('chemiko_text_2', array(
+        'label'         => __('Подпись для левого блока UKR', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_text_2',
+        'priority'      => 4
+    ));
+        $wp_customize->add_setting('chemiko_link_2');
+    $wp_customize->add_control('chemiko_link_2', array(
+        'label'         => __('Линк на страничку для левого блока UKR', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_link_2',
+        'priority'      => 5
+    ));
+        $wp_customize->add_setting('chemiko_text_3');
+    $wp_customize->add_control('chemiko_text_3', array(
+        'label'         => __('Подпись для левого блока EN', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_text_3',
+        'priority'      => 6
+    ));
+        $wp_customize->add_setting('chemiko_link_3');
+    $wp_customize->add_control('chemiko_link_3', array(
+        'label'         => __('Линк на страничку для левого блока EN', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_link_3',
+        'priority'      => 7
+    ));
+        $wp_customize->add_setting('chemiko_text_4');
+    $wp_customize->add_control('chemiko_text_4', array(
+        'label'         => __('Подпись для левого блока CZ', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_text_4',
+        'priority'      => 8
+    ));
+        $wp_customize->add_setting('chemiko_link_4');
+    $wp_customize->add_control('chemiko_link_4', array(
+        'label'         => __('Линк на страничку для левого блока CZ', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_link_4',
+        'priority'      => 8
+    ));
 
      /* NEW FIELD 2 IMG*/
 
@@ -226,25 +291,195 @@ function chemiko_customize_register($wp_customize){
             'label'    => __( 'Картинка для правого блока ', 'chemiko' ),
             'section'  => 'chemiko_field_section',
             'settings' => 'chemiko_img_2',
-            'priority'    => 4,
+            'priority'    => 9,
     )));
 
-    $wp_customize->add_setting('chemiko_link_2');
-    $wp_customize->add_control('chemiko_link_2', array(
-        'label'         => __('Линк на страничку для правого блока', 'chemiko'),
+    $wp_customize->add_setting('chemiko_link_5');
+    $wp_customize->add_control('chemiko_link_5', array(
+        'label'         => __('Линк на страничку для правого блока RU', 'chemiko'),
         'section'       => 'chemiko_field_section',
-        'setting'       => 'chemiko_link_1',
-        'priority'      => 5
+        'setting'       => 'chemiko_link_5',
+        'priority'      => 10
     ));
-        $wp_customize->add_setting('chemiko_text_2');
-    $wp_customize->add_control('chemiko_text_2', array(
-        'label'         => __('Подпись для правого блока', 'chemiko'),
+        $wp_customize->add_setting('chemiko_text_5');
+    $wp_customize->add_control('chemiko_text_5', array(
+        'label'         => __('Подпись для правого блока RU', 'chemiko'),
         'section'       => 'chemiko_field_section',
-        'setting'       => 'chemiko_text_1',
-        'priority'      => 6
+        'setting'       => 'chemiko_text_6',
+        'priority'      => 11
     ));
+        $wp_customize->add_setting('chemiko_link_6');
+    $wp_customize->add_control('chemiko_link_6', array(
+        'label'         => __('Линк на страничку для правого блока UKR', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_link_6',
+        'priority'      => 12
+    ));
+        $wp_customize->add_setting('chemiko_text_6');
+    $wp_customize->add_control('chemiko_text_6', array(
+        'label'         => __('Подпись для правого блока UKR', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_text_6',
+        'priority'      => 13
+    ));
+        $wp_customize->add_setting('chemiko_link_7');
+    $wp_customize->add_control('chemiko_link_7', array(
+        'label'         => __('Линк на страничку для правого блока EN', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_link_7',
+        'priority'      => 14
+    ));
+        $wp_customize->add_setting('chemiko_text_7');
+    $wp_customize->add_control('chemiko_text_7', array(
+        'label'         => __('Подпись для правого блока EN', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_text_7',
+        'priority'      => 15
+    ));
+        $wp_customize->add_setting('chemiko_link_8');
+    $wp_customize->add_control('chemiko_link_8', array(
+        'label'         => __('Линк на страничку для правого блока CZ', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_link_8',
+        'priority'      => 16
+    ));
+        $wp_customize->add_setting('chemiko_text_8');
+    $wp_customize->add_control('chemiko_text_8', array(
+        'label'         => __('Подпись для правого блока CZ', 'chemiko'),
+        'section'       => 'chemiko_field_section',
+        'setting'       => 'chemiko_text_8',
+        'priority'      => 17
+    ));
+
+        $wp_customize->add_panel( 'socials_panel_general', array(
+            'priority' => 33,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __( 'Настройки соцсетей ', 'chemiko' )
+        ) );
+
+        $wp_customize->add_section( 'chemiko_socials_section' , array(
+            'title'       => __( 'Настройки соцсетей подвала сайта', 'chemiko' ),
+            'priority'    => 30,
+            'panel' => 'socials_panel_general'
+        ));
+        $wp_customize->add_setting('chemiko_facebook');
+        $wp_customize->add_control('chemiko_facebook', array(
+            'label'         => __('Facebook', 'chemiko'),
+            'section'       => 'chemiko_socials_section',
+            'setting'       => 'chemiko_facebook',
+            'priority'      => 1
+        ));
+        $wp_customize->add_setting('chemiko_instagramm');
+        $wp_customize->add_control('chemiko_instagramm', array(
+            'label'         => __('Instagramm', 'chemiko'),
+            'section'       => 'chemiko_socials_section',
+            'setting'       => 'chemiko_instagramm',
+            'priority'      => 2
+        ));
+        $wp_customize->add_setting('chemiko_twitter');
+        $wp_customize->add_control('chemiko_twitter', array(
+            'label'         => __('Twitter', 'chemiko'),
+            'section'       => 'chemiko_socials_section',
+            'setting'       => 'chemiko_twitter',
+            'priority'      => 3
+        ));
 
 endif;
 }
 
 add_action('customize_register', 'chemiko_customize_register' );
+
+function lang_text($text, $lang){
+
+switch($text) {
+    case 'Подробнее':
+        switch ($lang) {
+            case 'ukr';
+                return 'Докладніше';
+            break;
+            case 'ru';
+                return $text;
+            break;
+            case 'en';
+                return 'More';
+            break;
+            case 'cs';
+                return 'více';
+            break;
+        }
+    break;
+}
+}
+
+function date_news($date, $time_variant = ''){
+    /* $time_variant return format date
+    "text_mon" return date in format 22 November
+     *
+    "number_mon" return date in format 22.10.2015
+     * */
+    $today = date('d.m.Y');
+    $date_news = date('d.m.Y',strtotime($date) );
+    $mon = array(1 => 'Января',2 => 'Февраля', 3 => 'Марта',4 => 'Апреля', 5 => 'Мая', 6=> 'Июня', 7 => 'Июля', 8 => 'Августа', 9 => 'Сентября', 10 => 'Октября', 11 => 'Ноября', 12 => 'Декабря',);
+    $mon_one = array(1 => 'Январь',2 => 'Февраль', 3 => 'Март',4 => 'Апрель', 5 => 'Май', 6=> 'Июнь', 7 => 'Июль', 8 => 'Август', 9 => 'Сентябрь', 10 => 'Октябрь', 11 => 'Ноябрь', 12 => 'Декабрь',);
+
+    if($time_variant == 'text_mon' ):
+
+        if($today == $date_news) :
+            return human_time_diff(get_the_time(date('U',strtotime($date) ) ), current_time('timestamp')) . ' назад';
+        else:
+            return date( 'd', strtotime($date) ) .' '. $mon[date( 'n', strtotime($date) )];
+        endif;
+    endif;
+
+    if($time_variant == 'one_mon' ):
+
+        if($today == $date_news) :
+            return human_time_diff(get_the_time(date('U',strtotime($date) ) ), current_time('timestamp')) . ' назад';
+        else:
+            return $mon_one[date( 'n', strtotime($date) )].'-'. date( 'd', strtotime($date) ).'-'. date('Y', strtotime($date));
+        endif;
+    endif;
+
+    if($time_variant == 'number_mon' ):
+
+        if($today == $date_news) :
+            return human_time_diff(get_the_time(date('U',strtotime($date) ) ), current_time('timestamp')) . ' назад';
+        else:
+            return $date_news;
+        endif;
+    endif;
+
+    if($time_variant == 'numeric' ):
+
+        return date( 'd.m.Y', strtotime($date) );
+
+    endif;
+
+    if($time_variant == 'big_test_mon' ):
+        return date( 'd', strtotime($date) ) .' '. $mon[date( 'n', strtotime($date) )] .' '. date( 'Y', strtotime($date) );
+    endif;
+}
+
+// FOR WIDGETS REGIONS
+
+function register_chemiko_widgets(){
+    register_sidebar(
+        array(
+            'name'          => __( 'Средний сайдбар на главной', 'theme_text_domain' ),
+            'id'            => 'front-widget-top',
+            'description'   => '',
+            'class'         => '',
+            'before_widget' => '<li id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</li>',
+            'before_title'  => '<div class="widget-title test">',
+            'after_title'   => '</div>' )
+    );
+}
+
+add_action('widgets_init', 'register_chemiko_widgets');
+
+function remove_img_attribute( $html ) {
+    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+    return $html;
+}

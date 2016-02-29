@@ -16,8 +16,8 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area content">
-    <main id="main" class="site-main" role="main">
+<div id="primary" class="content-area container">
+    <main id="main" class="site-main col-xs-12 col-md-8 col-sm-8" role="main">
 
         <?php if ( have_posts() ) : ?>
 
@@ -36,7 +36,7 @@ get_header(); ?>
                  * If you want to override this in a child theme, then include a file
                  * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                  */
-                get_template_part( 'content', get_post_format() );
+                get_template_part( 'content', 'page' );
 
                 // End the loop.
             endwhile;
@@ -49,7 +49,11 @@ get_header(); ?>
         ?>
 
     </main><!-- .site-main -->
-    <div class="clearfix"></div>
+    <div class="col-xs-12 col-md-4 col-sm-4 sidebar-right">
+
+        <?php get_template_part( 'section/content', 'mail-page' ); ?>
+
+    </div>
 </div><!-- .content-area -->
 
 <?php get_footer(); ?>
